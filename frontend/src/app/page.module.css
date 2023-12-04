@@ -1,16 +1,17 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: top;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
 }
 
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
@@ -97,7 +98,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -226,4 +227,22 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.header {
+  font-family: var(--font-mono);
+}
+
+.title {
+  font-family: var(--font-mono);
+  padding-bottom: 20px;
+}
+
+.button {
+  font-family: var(--font-mono);
+}
+
+.label {
+  font-family: var(--font-mono);
+  padding: 10px;
 }
