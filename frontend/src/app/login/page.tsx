@@ -45,6 +45,10 @@ export default function SignupPage() {
       <Header />
       <main className={styles.main}>
         <h1 className={styles.title}>Log In</h1>
+        <a href="/signup" className={styles.description}>
+          {" "}
+          Sign up{" "}
+        </a>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
             <label htmlFor="email" className={styles.label}>

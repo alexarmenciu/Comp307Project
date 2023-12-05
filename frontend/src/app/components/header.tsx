@@ -62,7 +62,7 @@ export default function Header() {
               {username}
             </a>
           ) : (
-            <a href="/signup" className={styles.link}>
+            <a href="/login" className={styles.link}>
               Login
             </a>
           )}
