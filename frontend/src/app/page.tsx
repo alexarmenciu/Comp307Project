@@ -1,3 +1,5 @@
+// Home.js
+
 import styles from "./page.module.css";
 import Header from "./components/header";
 
@@ -13,6 +15,11 @@ export default function Home() {
           </p>
         </div>
       </main>
+      <footer className={styles.footer}>
+        <p>&copy; 2023 Your Website</p>
+        {/* <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a> */}
+      </footer>
     </body>
   );
 }

@@ -108,6 +108,27 @@
 .logo {
   position: relative;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  color: #fff;
+  padding: 20px;
+  font-family: var(--font-mono);
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer p {
+  margin: 0;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -168,7 +189,6 @@
   .description div {
     display: flex;
     justify-content: center;
-    position: fixed;
     width: 100%;
   }
 
@@ -200,6 +220,14 @@
       rgb(var(--background-end-rgb)) 40%
     );
     z-index: 1;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px; /* Adjust the padding for mobile */
+  }
+  .footer a {
+    margin: 10px 0;
   }
 }
 
