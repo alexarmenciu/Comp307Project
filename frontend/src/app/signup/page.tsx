@@ -72,9 +72,10 @@ export default function SignupPage() {
               required
             />
           </div>
+          <br></br>
           <div className={styles.field}>
             <button type="submit" className={styles.button}>
-              Login
+              Sign Up
             </button>
           </div>
         </form>
