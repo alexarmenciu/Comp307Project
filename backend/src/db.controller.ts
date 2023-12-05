@@ -12,16 +12,12 @@ export class DbController {
     return this.dbService.findUser(username);
   }
 
-  @Get('login')
+  @Post('login')
   async login(
     @Body('username') username: string,
     @Body('password') password: string,
   ): Promise<User | null> {
-    const user = await this.dbService.findUser(username);
-    if (user && user.password === password) {
-      return user;
-    }
-    return null;
+    return this.dbService.loginUser(username, password);
   }
 
   @Post('users')

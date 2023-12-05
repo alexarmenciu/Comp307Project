@@ -19,6 +19,15 @@ export class DbService {
     return this.userModel.findOne({ username }).exec();
   }
 
+  async loginUser(username: string, password: string): Promise<User | null> {
+    const user = await this.findUser(username);
+    if (user && user.password === password) {
+      return user;
+    } else {
+      throw new Error('User does not exist');
+    }
+  }
+
   async createUser(username: string, password: string): Promise<User> {
     const user = new this.userModel({ username, password });
     if (await this.findUser(username)) {

@@ -14,7 +14,7 @@ export default function SignupPage() {
 
     try {
       const username = email;
-      const response = await fetch("http://localhost:3001/db/users", {
+      const response = await fetch("http://localhost:3001/db/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export default function SignupPage() {
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
-        <h1 className={styles.title}>Sign Up</h1>
+        <h1 className={styles.title}>Log In</h1>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
             <label htmlFor="email" className={styles.label}>
