@@ -12,6 +12,18 @@ export class DbController {
     return this.dbService.findUser(username);
   }
 
+  @Get('login')
+  async login(
+    @Body('username') username: string,
+    @Body('password') password: string,
+  ): Promise<User | null> {
+    const user = await this.dbService.findUser(username);
+    if (user && user.password === password) {
+      return user;
+    }
+    return null;
+  }
+
   @Post('users')
   async createUser(
     @Body('username') username: string,
