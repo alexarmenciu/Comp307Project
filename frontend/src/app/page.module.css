@@ -129,6 +129,23 @@
   margin: 0;
 }
 
+.table {
+  width: flex;
+  border-collapse: collapse;
+  margin-top: 20px; 
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  /* border: 1px solid rgb(24, 48, 30);  */
+  text-align: left;
+  padding-right: 30px
+}
+
+.table th {
+  background-color: #909894; 
+}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
