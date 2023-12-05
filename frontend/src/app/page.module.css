@@ -246,3 +246,8 @@
   font-family: var(--font-mono);
   padding: 10px;
 }
+
+.section {
+  font-family: var(--font-mono);
+  padding: 10px;
+}
