@@ -5,7 +5,7 @@ import styles from "../page.module.css";
 import Header from "../components/header";
 
 const AboutPage: React.FC = () => {
-  const jobsData = [
+  const [jobsData, setJobsData] = useState([
     { id: 1, title: "Job 1", description: "Description for Job 1" },
     { id: 2, title: "Job 2", description: "Description for Job 2" },
     {
@@ -34,7 +34,13 @@ const AboutPage: React.FC = () => {
       title: "Customer Support Representative",
       description: "Assist customers with product inquiries and issues.",
     },
-  ];
+  ]);
+
+  const getPosts = async () => {
+    const response = await fetch("http://localhost:3001/db/posts");
+    const data = await response.json();
+    console.log(data);
+  };
 
   return (
     <div className="main">
