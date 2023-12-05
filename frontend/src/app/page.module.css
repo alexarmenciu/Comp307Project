@@ -132,7 +132,7 @@
 .table {
   width: flex;
   border-collapse: collapse;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .table th,
@@ -140,12 +140,19 @@
   padding: 8px;
   /* border: 1px solid rgb(24, 48, 30);  */
   text-align: left;
-  padding-right: 30px
+  padding-right: 30px;
 }
 
 .table th {
-  background-color: #909894; 
+  background-color: #909894;
 }
+
+.field {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -156,6 +163,26 @@
   .card:hover span {
     transform: translateX(4px);
   }
+}
+
+.button {
+  font-family: var(--font-mono);
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #424242;
+  border-radius: 2px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(7, 74, 49);
+  color: #ffffff;
 }
 
 @media (prefers-reduced-motion) {
