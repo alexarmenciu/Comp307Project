@@ -68,6 +68,9 @@ const AboutPage: React.FC = () => {
           <a href="mailto:shuran.pan@mail.mcgill.ca">
             shuran.pan@mail.mcgill.ca
           </a>
+          <a href="mailto:oliver.stappas@mail.mcgill.ca">
+            oliver.stappas@mail.mcgill.ca
+          </a>
         </p>
       </footer>
     </div>
