@@ -21,6 +21,9 @@ export class DbService {
 
   async createUser(username: string, password: string): Promise<User> {
     const user = new this.userModel({ username, password });
+    if (await this.findUser(username)) {
+      throw new Error('User already exists');
+    }
     return user.save();
   }
 
@@ -28,7 +31,7 @@ export class DbService {
     const post = new this.postModel({
       title,
       body,
-      user,
+      user: this.findUser(user.username),
       timestamp: new Date(),
     });
     return post.save();
