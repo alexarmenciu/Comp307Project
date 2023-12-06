@@ -166,6 +166,20 @@
   }
 }
 
+.table a:hover {
+  color: rgb(52, 179, 133);
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: rgb(80, 140, 236);
+  text-decoration: none;
+}
+.section a:hover {
+  color: rgb(80, 236, 153);
+  text-decoration: none;
+}
+
 .button {
   font-family: var(--font-mono);
   display: inline-block;
@@ -182,8 +196,17 @@
 }
 
 .button:hover {
-  background-color: rgb(7, 74, 49);
+  background-color: rgb(5, 160, 103);
   color: #ffffff;
+}
+
+.footer a:hover {
+  color: rgb(80, 140, 236);
+  text-decoration: none;
+}
+.description a:hover {
+  color: rgb(5, 160, 103);
+  text-decoration: none;
 }
 
 @media (prefers-reduced-motion) {
