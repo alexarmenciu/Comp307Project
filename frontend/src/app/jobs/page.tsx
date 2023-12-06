@@ -51,7 +51,9 @@ const AboutPage: React.FC = () => {
               <tr key={job._id}>
                 <td>{job.title}</td>
                 <td>{job.body || "No description available"}</td>
-                <td>{job.link} </td>
+                <td>
+                  <a href={job.link}>{job.link}</a>{" "}
+                </td>
               </tr>
             ))}
           </tbody>

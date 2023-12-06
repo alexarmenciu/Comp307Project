@@ -33,8 +33,9 @@ export class DbController {
     @Body('title') title: string,
     @Body('body') body: string,
     @Body('user') user: User,
+    @Body('link') link: string,
   ): Promise<PostSchema> {
-    return this.dbService.createPost(title, body, user);
+    return this.dbService.createPost(title, body, user, link);
   }
 
   @Get('posts')

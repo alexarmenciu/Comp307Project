@@ -36,12 +36,18 @@ export class DbService {
     return user.save();
   }
 
-  async createPost(title: string, body: string, user: User): Promise<Post> {
+  async createPost(
+    title: string,
+    body: string,
+    user: User,
+    link: string,
+  ): Promise<Post> {
     const post = new this.postModel({
       title,
       body,
       user: this.findUser(user.username),
       timestamp: new Date(),
+      link,
     });
     return post.save();
   }

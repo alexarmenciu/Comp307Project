@@ -17,6 +17,9 @@ export class Post {
 
   @Prop()
   timestamp: Date;
+
+  @Prop()
+  link: string;
 }
 
 export const PostSchema = SchemaFactory.createForClass(Post);
