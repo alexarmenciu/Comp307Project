@@ -35,10 +35,19 @@ const AboutPage: React.FC = () => {
       <Header />
       <section className={styles.section}>
         <h2>Jobs</h2>
-        <p>Welcome to the Jobs page</p>
+        <p>
+          Welcome to the Jobs page{" "}
+          <a
+            href="/jobs/post"
+            className={styles.link}
+            style={{ right: "0", float: "right" }}
+          >
+            Post a Job
+          </a>
+        </p>
         <br></br>
         <br></br>
-        <table className={styles.table}>
+        <table className={styles.table} style={{ width: "100%" }}>
           <thead>
             <tr>
               <th>Title</th>
