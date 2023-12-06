@@ -19,9 +19,8 @@ export default function Home() {
         </div>
       </main>
       <footer className={styles.footer}>
-        <p>&copy; 2023 Your Website</p>
-        {/* <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a> */}
+        <p>&copy; 2023 Hacker Jobs</p>
+        <a href="mailto:shuran.pan@mail.mcgill.ca">Contact Us</a>
       </footer>
     </body>
   );

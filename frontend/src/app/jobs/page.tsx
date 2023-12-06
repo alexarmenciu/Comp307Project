@@ -43,6 +43,7 @@ const AboutPage: React.FC = () => {
             <tr>
               <th>Title</th>
               <th>Description</th>
+              <th>Apply</th>
             </tr>
           </thead>
           <tbody>
@@ -50,6 +51,7 @@ const AboutPage: React.FC = () => {
               <tr key={job._id}>
                 <td>{job.title}</td>
                 <td>{job.body || "No description available"}</td>
+                <td>{job.link} </td>
               </tr>
             ))}
           </tbody>
