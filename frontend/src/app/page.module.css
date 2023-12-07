@@ -14,7 +14,7 @@
   align-items: center;
   font-size: 0.85rem;
   max-width: var(--max-width);
-  width: 100%;
+  /* width: 100%; */
   z-index: 2;
   font-family: var(--font-mono);
 }
@@ -211,6 +211,11 @@
   text-decoration: none;
 }
 
+.main a:hover {
+  color: rgb(5, 160, 103);
+  text-decoration: none;
+}
+
 @media (prefers-reduced-motion) {
   .card:hover span {
     transform: none;
@@ -352,13 +357,27 @@
 .section p {
   font-family: var(--font-mono);
   padding: 10px;
-  animation: slideIn 0.5s ease-out;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.section h2::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: rgb(5, 160, 103);
 }
 .section a {
   font-family: var(--font-mono);
   padding: 10px;
 }
 
+.section h2 {
+  font-family: var(--font-mono);
+  padding: 10px;
+  color: rgb(5, 160, 103);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: flicker 0.05s infinite alternate, typing 2s steps(40) alternate;
+}
 .form {
   font-family: var(--font-mono);
   padding: 10px;
@@ -366,6 +385,17 @@
   flex-direction: column;
   justify-content: left;
   align-items: center;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes bounce {
@@ -383,5 +413,23 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
