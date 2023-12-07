@@ -8,7 +8,7 @@ export default function Home() {
     <body>
       <Header />
       <main className={styles.main}>
-        <h1 className={styles.title} style={{ fontSize: "10vh" }}>
+        <h1 className={styles.center} style={{ fontSize: "10vh" }}>
           Welcome to Hacker Jobs
         </h1>
         <div className={styles.description}>

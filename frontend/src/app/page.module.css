@@ -74,11 +74,13 @@
 }
 
 .center {
+  font-family: var(--font-mono);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 4rem 0;
+  animation: bounce 1s infinite alternate; /* Use the bounce animation infinitely */
 }
 
 .center::before {
@@ -347,6 +349,15 @@
   font-family: var(--font-mono);
   padding: 10px;
 }
+.section p {
+  font-family: var(--font-mono);
+  padding: 10px;
+  animation: slideIn 0.5s ease-out;
+}
+.section a {
+  font-family: var(--font-mono);
+  padding: 10px;
+}
 
 .form {
   font-family: var(--font-mono);
@@ -355,4 +366,22 @@
   flex-direction: column;
   justify-content: left;
   align-items: center;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }

@@ -46,8 +46,7 @@ export default function SignupPage() {
       <main className={styles.main}>
         <h1 className={styles.title}>Log In</h1>
         <a href="/signup" className={styles.description}>
-          {" "}
-          Sign up{" "}
+          Sign up &nbsp;&nbsp;
         </a>
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
@@ -76,6 +75,7 @@ export default function SignupPage() {
               required
             />
           </div>
+          <br></br>
           <div className={styles.field}>
             <button type="submit" className={styles.button}>
               Login
