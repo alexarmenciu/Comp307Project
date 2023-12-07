@@ -8,14 +8,35 @@ export default function Home() {
     <body>
       <Header />
       <main className={styles.main}>
+        <h1 className={styles.title} style={{ fontSize: "10vh" }}>
+          Welcome to Hacker Jobs
+        </h1>
         <div className={styles.description}>
-          <p className={styles.center}>
-            This is a Next.js (React) app with a NestJS (Express) backend. The
-            frontend and backend are written in TypeScript.
+          <p className={styles.center} style={{ width: "80vw" }}>
+            <section>
+              <h2 className={styles.title} style={{ fontSize: "7vh" }}>
+                Our Successes
+              </h2>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div style={{ padding: "20px" }}>
+                  <h3>Jobs Posted</h3>
+                  <img
+                    src="https://www.aeaweb.org/content/file?id=4578"
+                    style={{ height: "20vh" }}
+                  />
+                  <p>1000+</p>
+                </div>
+                <div style={{ padding: "20px" }}>
+                  <h3>Happy Hires</h3>
+                  <img
+                    src="https://assets-global.website-files.com/6516813912555e8b460c1f1e/652d1a8b12eb4cf0c38e2af8_Unique%20hiring%20process.png"
+                    style={{ height: "20vh" }}
+                  />
+                  <p>500+</p>
+                </div>
+              </div>
+            </section>
           </p>
-        </div>
-        <div className={styles.center}>
-          <img src="data:image/jpeg;base64,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"></img>
         </div>
       </main>
       <footer className={styles.footer}>
