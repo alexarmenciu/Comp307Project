@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const [hasSession, setHasSession] = useState(false);
   const [username, setUsername] = useState("");
+  const [isHovering, setHover] = useState(false);
 
   const logout = async () => {
     document.cookie = "session=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
@@ -59,8 +60,13 @@ export default function Header() {
             About
           </a>
           {hasSession ? (
-            <a className={styles.link} onClick={logout}>
-              {username}
+            <a
+              className={styles.link}
+              onClick={logout}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+            >
+              {isHovering ? `Logout` : username}{" "}
             </a>
           ) : (
             <a href="/login" className={styles.link}>
