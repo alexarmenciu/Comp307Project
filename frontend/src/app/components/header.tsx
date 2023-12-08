@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const [hasSession, setHasSession] = useState(false);
   const [username, setUsername] = useState("");
+
   const logout = async () => {
     document.cookie = "session=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
     document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";

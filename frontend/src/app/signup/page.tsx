@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "../page.module.css";
 import Header from "../components/header";
+import sha256 from "../components/hashing";
 
 export default function SignupPage() {
   const [email, setEmail] = useState("");
@@ -14,12 +15,13 @@ export default function SignupPage() {
 
     try {
       const username = email;
+      const hashedword = await sha256(password);
       const response = await fetch("http://localhost:3001/db/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password: hashedword }),
       });
 
       if (response.ok) {
