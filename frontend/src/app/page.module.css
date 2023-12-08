@@ -5,6 +5,20 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  text-align: center;
+}
+
+/* signup and login animations */
+.main h1 {
+  color: rgb(5, 160, 103);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: flicker 0.05s infinite alternate, typing 2s steps(40);
+}
+.main h1::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: rgb(255, 255, 255);
 }
 
 .description {
@@ -323,15 +337,6 @@
   }
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
 .header {
   font-family: var(--font-mono);
 }
@@ -339,6 +344,12 @@
 .title {
   font-family: var(--font-mono);
   padding-bottom: 20px;
+}
+
+.title p::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: rgb(255, 255, 255);
 }
 
 .button {
@@ -360,11 +371,6 @@
   margin: 0 auto;
   max-width: 100%;
 }
-.section h2::after {
-  content: "|";
-  animation: blink 1s infinite;
-  color: rgb(5, 160, 103);
-}
 .section a {
   font-family: var(--font-mono);
   padding: 10px;
@@ -378,6 +384,13 @@
   white-space: nowrap;
   animation: flicker 0.05s infinite alternate, typing 2s steps(40) alternate;
 }
+
+.section h2::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: rgb(5, 160, 103);
+}
+
 .form {
   font-family: var(--font-mono);
   padding: 10px;
@@ -431,5 +444,14 @@
   }
   to {
     width: 100%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
