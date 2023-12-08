@@ -44,8 +44,8 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div>
-          <a href="/" className={styles.title}>
-            <p>Hacker Jobs</p>
+          <a href="/" className={styles.hackerjobs}>
+            Hacker Jobs
           </a>
         </div>
       </nav>

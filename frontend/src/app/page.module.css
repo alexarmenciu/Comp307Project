@@ -352,6 +352,12 @@
   color: rgb(255, 255, 255);
 }
 
+.hackerjobs::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: rgb(255, 255, 255);
+}
+
 .button {
   font-family: var(--font-mono);
 }
