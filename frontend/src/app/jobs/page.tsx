@@ -6,6 +6,7 @@ import Header from "../components/header";
 
 const AboutPage: React.FC = () => {
   const [jobsData, setJobsData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -27,6 +28,10 @@ const AboutPage: React.FC = () => {
       });
   }, []);
 
+  const filteredJobsData = jobsData.filter((job) =>
+    job.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading jobs: {error}</p>;
 
@@ -36,6 +41,14 @@ const AboutPage: React.FC = () => {
       <section className={styles.section}>
         <h2>Jobs</h2>
         <p>Welcome to the Jobs page </p>
+        {/* Add a search input here */}
+        <input
+          type="text"
+          placeholder="Search job titles..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className={styles.searchInput}
+        />
         <a
           href="/jobs/post"
           className={styles.link}
@@ -55,7 +68,7 @@ const AboutPage: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            {jobsData.map((job) => (
+            {filteredJobsData.map((job) => (
               <tr key={job._id}>
                 <td>{job.title}</td>
                 <td>{job.body || "No description available"}</td>
