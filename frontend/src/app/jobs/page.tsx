@@ -8,6 +8,7 @@ interface Job {
   title: string;
   body: string;
   link: string;
+  _id: string;
 }
 
 const AboutPage: React.FC = () => {
@@ -76,7 +77,7 @@ const AboutPage: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredJobsData.map((job) => (
+            {filteredJobsData.map((job: Job) => (
               <tr key={job._id}>
                 <td>{job.title}</td>
                 <td>{job.body || "No description available"}</td>
