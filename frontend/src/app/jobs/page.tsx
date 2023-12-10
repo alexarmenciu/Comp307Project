@@ -40,14 +40,16 @@ const AboutPage: React.FC = () => {
       <Header />
       <section className={styles.section}>
         <h2>Jobs</h2>
-        <p>Welcome to the Jobs page </p>
-        {/* Add a search input here */}
+        <p>Welcome to the Jobs page</p>
+        {/* Search input */}
+        <label htmlFor="title" className={styles.label}>
+          Search by title:
+        </label>
         <input
           type="text"
-          placeholder="Search job titles..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className={styles.searchInput}
+          className={styles.input}
         />
         <a
           href="/jobs/post"
