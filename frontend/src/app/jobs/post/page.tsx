@@ -14,10 +14,13 @@ const AboutPage: React.FC = () => {
     console.log("here");
 
     try {
-      const user = document.cookie
+      const tempCookie = document.cookie
         .split("; ")
-        .find((row) => row.startsWith("email="))
-        .split("=")[1];
+        .find((row) => row.startsWith("email="));
+
+      // Using nullish coalescing operator (??)
+      const user = tempCookie?.split("=")[1] ?? "null";
+
       const response = await fetch("http://localhost:3001/db/posts", {
         method: "POST",
         headers: {
