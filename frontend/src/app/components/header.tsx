@@ -30,12 +30,13 @@ export default function Header() {
         ) {
           // Session is still valid
           setHasSession(true);
-          setUsername(
-            document.cookie
-              .split("; ")
-              .find((row) => row.startsWith("email="))
-              .split("=")[1]
-          );
+          const tempCookie = document.cookie
+            .split("; ")
+            .find((row) => row.startsWith("email="));
+
+          // Using nullish coalescing operator (??)
+          const temp = tempCookie?.split("=")[1] ?? "null";
+          setUsername(temp);
         }
       }
     };
