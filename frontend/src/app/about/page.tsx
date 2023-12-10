@@ -12,14 +12,14 @@ const AboutPage: React.FC = () => {
       <section className={styles.section}>
         <h2>Our Story</h2>
         <p>
-          Hello! We're a group of Computer Science students at McGill University
-          in our final year of undergrad. With the current job market challenges
-          in mind, we've put together this website to make job hunting a bit
-          easier for fellow students. We hope you find it useful! Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-          Vestibulum in fermentum justo. Mauris id justo ut nunc tincidunt
-          dapibus. Quisque vel dictum nisl. Duis vel elit sit amet nisl tempus
-          facilisis vel vel velit.
+          Hello! We&apos;re a group of Computer Science students at McGill
+          University in our final year of undergrad. With the current job market
+          challenges in mind, we&apos;ve put together this website to make job
+          hunting a bit easier for fellow students. We hope you find it useful!
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          facilisi. Vestibulum in fermentum justo. Mauris id justo ut nunc
+          tincidunt dapibus. Quisque vel dictum nisl. Duis vel elit sit amet
+          nisl tempus facilisis vel vel velit.
         </p>
       </section>
 
