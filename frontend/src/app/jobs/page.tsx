@@ -4,6 +4,12 @@ import React, { useState, useEffect } from "react";
 import styles from "../page.module.css";
 import Header from "../components/header";
 
+interface Job {
+  title: string;
+  body: string;
+  link: string;
+}
+
 const AboutPage: React.FC = () => {
   const [jobsData, setJobsData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,7 +34,7 @@ const AboutPage: React.FC = () => {
       });
   }, []);
 
-  const filteredJobsData = jobsData.filter((job) =>
+  const filteredJobsData = jobsData.filter((job: Job) =>
     job.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
