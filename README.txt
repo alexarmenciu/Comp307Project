@@ -1,4 +1,4 @@
-https://1ceb-135-84-23-245.ngrok-free.app/ - mail alex.armenciu@mail.mcgill.ca if the webpage is not available, I am running it on my own computer
+https://1ceb-135-84-23-245.ngrok-free.app/ - mail alexandru.armenciu@mail.mcgill.ca if the webpage is not available, I am running it on my own computer
 
 Contributors:
 
