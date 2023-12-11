@@ -25,31 +25,23 @@ const AboutPage: React.FC = () => {
         <p>To pass Comp307! For the Glory!!!!!!</p>
         <p>
           Navigating the transition from academia to the professional world can
-          be a daunting task. We know this first hand. That's why we created
-          this website, carefully designed and curated with the sole purpose of
-          making your job hunting journey a tad smoother. Vestibulum eu sapien
-          faucibus, auctor nibh congue, aliquet justo. Aenean tristique turpis
-          ac felis semper bibendum. In tincidunt pharetra odio. Curabitur
-          venenatis elit id erat facilisis, et suscipit nisi scelerisque. Morbi
-          venenatis fringilla nulla vitae rutrum. Phasellus vel lobortis sapien,
-          a elementum sapien. In at posuere mi. Praesent commodo, nibh nec
-          rutrum dignissim, orci erat tristique augue, sit amet porttitor felis
-          nibh vitae massa. Sed nibh velit, imperdiet in bibendum nec, molestie
-          porta nunc. Donec eget dictum mi. Phasellus laoreet lorem sit amet sem
-          ullamcorper, eget blandit quam accumsan. Sed imperdiet augue sit amet
-          lacus blandit interdum. Quisque finibus quam eu erat ornare feugiat.
+          be a daunting task. We know this first hand. That&apos;s why we
+          created this website, carefully designed and curated with the sole
+          purpose of making your job hunting journey a tad smoother. Welcome to
+          Hacker Jobs, where our mission is to connect the brightest minds with
+          groundbreaking opportunities in the ever-evolving landscape of
+          cybersecurity and technology. At Hacker Jobs, we believe in fostering
+          a community of innovation, where talented individuals and
+          forward-thinking organizations come together to shape the future of
+          the web.
         </p>
       </section>
 
       <section className={styles.section}>
         <h2>Meet the Team</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          facilisi. Vestibulum in fermentum justo. Mauris id justo ut nunc
-          tincidunt dapibus. Phasellus vel lobortis sapien, a elementum sapien.
-          In at posuere mi. Praesent commodo, nibh nec rutrum dignissim, orci
-          erat tristique augue, sit amet porttitor felis nibh vitae massa. Sed
-          nibh velit, imperdiet in bibendum nec, molestie porta nunc.
+          Made by Alex Armenciu, Susan Pan, and Oliver Stappas, all final year
+          students at McGill University.
         </p>
         <ul>
           <li>Alex Armenciu </li>
