@@ -17,6 +17,8 @@ const AboutPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // redirect user to login page if not logged in
+
   const fetchData = async () => {
     fetch("https://8e21-135-84-23-245.ngrok-free.app/db/posts", {
       method: "GET",
@@ -45,6 +47,36 @@ const AboutPage: React.FC = () => {
       });
   };
   useEffect(() => {
+    const checkSession = async () => {
+      const sessionCookie = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("session="));
+
+      if (sessionCookie) {
+        const expirationTimeString = sessionCookie.split("=")[1];
+        const expirationDate = new Date(expirationTimeString);
+
+        if (
+          !isNaN(expirationDate.getTime()) &&
+          expirationDate.getTime() > Date.now()
+        ) {
+          // Session is still valid
+          // setHasSession(true);
+          // const tempCookie = document.cookie
+          //   .split("; ")
+          //   .find((row) => row.startsWith("email="));
+          // // Using nullish coalescing operator (??)
+          // const temp = tempCookie?.split("=")[1] ?? "null";
+          // setUsername(temp);
+        } else {
+          window.location.href = "/login";
+        }
+      } else {
+        window.location.href = "/login";
+      }
+    };
+
+    checkSession();
     fetchData();
   }, []);
 
