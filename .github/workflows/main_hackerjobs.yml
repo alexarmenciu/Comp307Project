@@ -28,7 +28,7 @@ jobs:
           npm run build --if-present
           npm run test --if-present
           zip release.zip ./* -r
-          mv file.txt ../
+          mv release.zip ../
           cd ../
 
       - name: Upload artifact for deployment job
