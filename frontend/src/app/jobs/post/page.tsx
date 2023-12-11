@@ -21,13 +21,16 @@ const AboutPage: React.FC = () => {
       // Using nullish coalescing operator (??)
       const user = tempCookie?.split("=")[1] ?? "null";
 
-      const response = await fetch("http://localhost:3001/db/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ user, title, body, link }),
-      });
+      const response = await fetch(
+        "https://8e21-135-84-23-245.ngrok-free.app/db/posts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ user, title, body, link }),
+        }
+      );
 
       // Redirecting on the client side
       window.location.href = "/jobs";

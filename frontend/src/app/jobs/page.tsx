@@ -17,8 +17,13 @@ const AboutPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch("http://localhost:3001/db/posts")
+  const fetchData = async () => {
+    fetch("https://8e21-135-84-23-245.ngrok-free.app/db/posts", {
+      method: "GET",
+      headers: {
+        "ngrok-skip-browser-warning": "True",
+      },
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -26,13 +31,21 @@ const AboutPage: React.FC = () => {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         setJobsData(data);
         setIsLoading(false);
       })
       .catch((error) => {
+        console.log(
+          "There has been a problem with your fetch operation:",
+          error
+        );
         setError(error.message);
         setIsLoading(false);
       });
+  };
+  useEffect(() => {
+    fetchData();
   }, []);
 
   const filteredJobsData = jobsData.filter((job: Job) =>

@@ -16,13 +16,16 @@ export default function SignupPage() {
     try {
       const username = email;
       const hashedword = await sha256(password);
-      const response = await fetch("http://localhost:3001/db/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password: hashedword }),
-      });
+      const response = await fetch(
+        "https://8e21-135-84-23-245.ngrok-free.app/db/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password: hashedword }),
+        }
+      );
 
       if (response.ok) {
         const date = new Date();
