@@ -14,3 +14,5 @@ Susan Pan
 Oliver Stappas
 - Created the Jobs page
 - Created the job search function
+
+The presentation was done by all, submitted by team leader Alex Armenciu
