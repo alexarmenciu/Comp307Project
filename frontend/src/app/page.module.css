@@ -10,7 +10,7 @@
 
 /* signup and login animations */
 .main h1 {
-  color: rgb(5, 160, 103);
+  color: rgb(22, 255, 170);
   overflow: hidden;
   white-space: nowrap;
   animation: flicker 0.05s infinite alternate, typing 2s steps(40);
@@ -18,7 +18,7 @@
 .main h1::after {
   content: "|";
   animation: blink 1s infinite;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 254, 254);
 }
 
 .description {
@@ -94,7 +94,7 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
-  animation: bounce 1s infinite alternate; /* Use the bounce animation infinitely */
+  animation: glitch 2s infinite;
 }
 
 .center::before {
@@ -394,7 +394,7 @@
 .section h2::after {
   content: "|";
   animation: blink 1s infinite;
-  color: rgb(5, 160, 103);
+  color: rgb(195, 195, 195);
 }
 
 .form {
@@ -459,5 +459,20 @@
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
   }
 }

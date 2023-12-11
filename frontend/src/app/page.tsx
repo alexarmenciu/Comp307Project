@@ -14,7 +14,10 @@ export default function Home() {
         <div className={styles.description}>
           <div className={styles.center} style={{ width: "80vw" }}>
             <section>
-              <h2 className={styles.title} style={{ fontSize: "7vh" }}>
+              <h2
+                className={styles.title}
+                style={{ fontSize: "7vh", color: "#00ff9d" }}
+              >
                 Our Services
               </h2>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
